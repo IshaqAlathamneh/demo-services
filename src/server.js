@@ -5,7 +5,7 @@ const cors = require("cors");
 const authRouter = require("./api/authentication/routes");
 const userRouter = require("./api/user/routes");
 const reflectionRouter = require("./api/reflection/routes");
-const {pool, createTables, dropTables} = require('./models/index')
+const {pool, createTables} = require('./models/index')
 
 const app = express();
 const PORT = process.env.PORT;

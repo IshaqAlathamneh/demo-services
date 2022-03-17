@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
   if (!isValidEmail(email)) next("Please enter a valid email address");
   try {
     const {rows} = await getUserByEmail(email);
-    if (!rows[0]) next("Invalid login....");
+    if (!rows) next("Invalid login....");
 
     const isMatch = comparePassword(password, rows[0].password);
     console.log(isMatch);

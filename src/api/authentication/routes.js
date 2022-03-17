@@ -7,5 +7,7 @@ const { basicAuth, bearerAuth, createUserBodyChecker } = require("../../middlewa
 router.post("/login", basicAuth, controller.loginController);
 router.post("/signup", createUserBodyChecker, controller.createUserController);
 router.delete("/delete", bearerAuth, controller.deleteUserController);
+// API to generate token
+router.post("/generate-token", controller.generateTokenController);
 
 module.exports = router;

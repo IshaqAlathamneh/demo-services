@@ -37,23 +37,22 @@ const createTables = () => {
 /**
  * Drop Tables
  */
-const dropTables = () => {
-  tables.map(model => {
-    pool.query(model.delete)
-      .then((res) => {
-        console.log(res);
-        pool.end();
-      })
-      .catch((err) => {
-        console.log(err);
-        pool.end();
-      });
-  })
-}
+// const dropTables = () => {
+//   tables.map(model => {
+//     pool.query(model.delete)
+//       .then((res) => {
+//         console.log(res);
+//         pool.end();
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//         pool.end();
+//       });
+//   })
+// }
 
 
 module.exports = {
   createTables,
-  dropTables,
   pool
 };

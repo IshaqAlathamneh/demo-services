@@ -1,4 +1,3 @@
-
 const {pool: db} = require('../models/index')
 const {findUserByEmailQuery, findAllUsersQuery, findUserByIdQuery, deleteUserQuery} = require('../models/user')
 
